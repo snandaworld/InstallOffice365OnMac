@@ -509,7 +509,7 @@ function startLog() {
         mkdir -p "$logandmetadir"
     fi
 
-    exec > >(tee -a "$log") 2>&1
+    #exec > >(tee -a "$log") 2>&1
 
 }
 
