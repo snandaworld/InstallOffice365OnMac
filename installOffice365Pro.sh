@@ -138,6 +138,10 @@ function OfficeURLCheck() {
     13.*)
         echo "$(date) |  + macOS 13.x Ventura detected, installing latest available version"
         ;;
+        
+    14.*)
+        echo "$(date) |  + macOS 14.x Sonoma detected, installing latest available version"
+        ;;
 
     *)
         echo "$(date) |  + Unknown OS $os_ver"
