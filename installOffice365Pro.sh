@@ -31,7 +31,8 @@ tempdir=$(mktemp -d)
 tempfile="$appname.pkg"
 log="$logandmetadir/$appname.log"                                               # The location of the script log file
 metafile="$logandmetadir/$appname.meta"                                         # The location of our meta file (for updates)
-
+BACKUPPATH="~/Documents/Outlook_Backup"
+SOURCEPATH="~/Library/Group\ Containers/UBF8T346G9.Office/Outlook/"
 # function to delay script if the specified process is running
 waitForProcess () {
 
@@ -446,6 +447,11 @@ function installPKG () {
         echo "$(date) | Application [$appname] succesfully installed"
         fetchLastModifiedDate update
         updateSplashScreen success Installed    # Swift Dialog
+        echo "Restoring dat backup..."
+        # Restore Outlook data
+        cp -r $BACKUPPATH/OutlookData $SOURCEPATH
+
+        echo "Restoring Outlook data backup is completed."
 
         exit 0
 
