@@ -370,7 +370,7 @@ function updateCheck() {
             echo "$(date) | [$appname] is already installed and handles updates itself, exiting"
             echo "Restoring Outlook data..."
             # Restore Outlook data
-            mkdir -p $SOURCEPATH
+            mkdir -p "$SOURCEPATH"
             mv -r "$BACKUPPATH"/* "$SOURCEPATH"
             echo "Restoring Outlook data backup is completed. You may launch the Outlook now and verify your data  ^_~ "
             updateSplashScreen success Installed         # Swift Dialog
@@ -454,9 +454,8 @@ function installPKG () {
         updateSplashScreen success Installed    # Swift Dialog
         echo "Restoring Outlook data..."
         # Restore Outlook data
-        mkdir -p $SOURCEPATH
+        mkdir -p "$SOURCEPATH"
         mv -r "$BACKUPPATH"/* "$SOURCEPATH"
-        echo "Restoring Outlook data backup is completed. You may launch the Outlook now and verify your data  ^_~ "
         echo "Restoring Outlook data backup is completed. You may launch the Outlook now and verify your data  ^_~ "
 
         exit 0
