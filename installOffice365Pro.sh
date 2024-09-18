@@ -371,7 +371,7 @@ function updateCheck() {
             echo "Restoring Outlook data..."
             # Restore Outlook data
             mkdir -p "$SOURCEPATH"
-            mv -r "$BACKUPPATH"/* "$SOURCEPATH"
+            mv -f "$BACKUPPATH"/* "$SOURCEPATH"
             echo "Restoring Outlook data backup is completed. You may launch the Outlook now and verify your data  ^_~ "
             updateSplashScreen success Installed         # Swift Dialog
             exit 0;
@@ -455,7 +455,7 @@ function installPKG () {
         echo "Restoring Outlook data..."
         # Restore Outlook data
         mkdir -p "$SOURCEPATH"
-        mv -r "$BACKUPPATH"/* "$SOURCEPATH"
+        mv -f "$BACKUPPATH"/* "$SOURCEPATH"
         echo "Restoring Outlook data backup is completed. You may launch the Outlook now and verify your data  ^_~ "
 
         exit 0
