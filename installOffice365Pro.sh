@@ -370,7 +370,7 @@ function updateCheck() {
             echo "$(date) | [$appname] is already installed and handles updates itself, exiting"
             echo "Restoring Outlook data..."
             # Restore Outlook data
-            cp -r $BACKUPPATH/OutlookData $SOURCEPATH
+            cp -r $BACKUPPATH/OutlookData ~/Library/Group Containers/UBF8T346G9.Office/Outlook/
             echo "Restoring Outlook data backup is completed. You may launch the Outlook now and verify your data  ^_~ "
             updateSplashScreen success Installed         # Swift Dialog
             exit 0;
