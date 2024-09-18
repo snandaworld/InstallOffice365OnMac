@@ -368,6 +368,10 @@ function updateCheck() {
         # App is installed, if it's updates are handled by MAU we should quietly exit
         if [[ $autoUpdate == "true" ]]; then
             echo "$(date) | [$appname] is already installed and handles updates itself, exiting"
+            echo "Restoring Outlook data..."
+            # Restore Outlook data
+            cp -r $BACKUPPATH/OutlookData $SOURCEPATH
+            echo "Restoring Outlook data backup is completed. You may launch the Outlook now and verify your data  ^_~ "
             updateSplashScreen success Installed         # Swift Dialog
             exit 0;
         fi
@@ -447,7 +451,7 @@ function installPKG () {
         echo "$(date) | Application [$appname] succesfully installed"
         fetchLastModifiedDate update
         updateSplashScreen success Installed    # Swift Dialog
-        echo "Restoring dat backup..."
+        echo "Restoring outlook data backup..."
         # Restore Outlook data
         cp -r $BACKUPPATH/OutlookData $SOURCEPATH
 
