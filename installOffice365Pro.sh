@@ -451,11 +451,10 @@ function installPKG () {
         echo "$(date) | Application [$appname] succesfully installed"
         fetchLastModifiedDate update
         updateSplashScreen success Installed    # Swift Dialog
-        echo "Restoring outlook data backup..."
+        echo "Restoring Outlook data..."
         # Restore Outlook data
         cp -r $BACKUPPATH/OutlookData $SOURCEPATH
-
-        echo "Restoring Outlook data backup is completed."
+        echo "Restoring Outlook data backup is completed. You may launch the Outlook now and verify your data  ^_~ "
 
         exit 0
 
