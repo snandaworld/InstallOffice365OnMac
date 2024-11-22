@@ -31,7 +31,7 @@ tempdir=$(mktemp -d)
 tempfile="$appname.pkg"
 log="$logandmetadir/$appname.log"                                               # The location of the script log file
 metafile="$logandmetadir/$appname.meta"                                         # The location of our meta file (for updates)
-BACKUPPATH="~/Documents/Outlook_Backup/OutlookData"
+BACKUPPATH="~/Documents/Outlook_Backup"
 SOURCEPATH="~/Library/Group\ Containers/UBF8T346G9.Office/Outlook/"
 # function to delay script if the specified process is running
 waitForProcess () {
